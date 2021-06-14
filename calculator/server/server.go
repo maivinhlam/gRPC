@@ -4,6 +4,7 @@ import (
 	"calculator/calculatorpb"
 	"context"
 	"fmt"
+	"io"
 	"log"
 	"net"
 	"time"
@@ -30,7 +31,7 @@ func main() {
 
 	s := grpc.NewServer()
 
-	calculatorpb.RegisterCalcularotServiceServer(s, &server{})
+	calculatorpb.RegisterCalculatorServiceServer(s, &server{})
 
 	fmt.Println("Calculator is running ....")
 	err = s.Serve(lis)
@@ -40,7 +41,7 @@ func main() {
 	}
 }
 
-func (*server) PrimeNumberDecomposition(req *calculatorpb.PNDRequest, stream calculatorpb.CalcularotService_PrimeNumberDecompositionServer) error {
+func (*server) PrimeNumberDecomposition(req *calculatorpb.PNDRequest, stream calculatorpb.CalculatorService_PrimeNumberDecompositionServer) error {
 	log.Println("PrimeNumberDecomposition called ...")
 
 	k := int32(2)
@@ -61,4 +62,28 @@ func (*server) PrimeNumberDecomposition(req *calculatorpb.PNDRequest, stream cal
 		}
 	}
 	return nil
+}
+
+func (*server) Average(stream calculatorpb.CalculatorService_AverageServer) error {
+	log.Println("Average called..")
+	var total float32
+	var count int
+	for {
+		req, err := stream.Recv()
+		if err == io.EOF {
+			resp := &calculatorpb.AvgResponse{
+				Result: total / float32(count),
+			}
+
+			return stream.SendAndClose(resp)
+		}
+
+		if err != nil {
+			log.Fatalf("Err while Recv Average %v", err)
+			return err
+		}
+		log.Printf("Receive num %v", req)
+		total += req.GetNumber()
+		count++
+	}
 }

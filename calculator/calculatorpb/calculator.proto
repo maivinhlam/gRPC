@@ -21,7 +21,16 @@ message PNDResponse {
     int32 result = 1;
 }
 
-service CalcularotService {
+message AvgRequest {
+    float number = 1;
+}
+
+message AvgResponse {
+    float result = 1;
+}
+
+service CalculatorService {
     rpc Sum(SumRequest) returns (SumResponse) {};
     rpc PrimeNumberDecomposition(PNDRequest) returns (stream PNDResponse) {}
+    rpc Average(stream AvgRequest) returns (AvgResponse) {}
 }

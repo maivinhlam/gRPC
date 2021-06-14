@@ -335,8 +335,8 @@ var file_calculatorpb_calculator_proto_rawDesc = []byte{
 	0x01, 0x28, 0x02, 0x52, 0x06, 0x6e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x22, 0x25, 0x0a, 0x0b, 0x41,
 	0x76, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x72, 0x65,
 	0x73, 0x75, 0x6c, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x02, 0x52, 0x06, 0x72, 0x65, 0x73, 0x75,
-	0x6c, 0x74, 0x32, 0xdc, 0x01, 0x0a, 0x11, 0x43, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61, 0x72, 0x6f,
-	0x74, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x38, 0x0a, 0x03, 0x53, 0x75, 0x6d, 0x12,
+	0x6c, 0x74, 0x32, 0xde, 0x01, 0x0a, 0x11, 0x43, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74, 0x6f,
+	0x72, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x38, 0x0a, 0x03, 0x53, 0x75, 0x6d, 0x12,
 	0x16, 0x2e, 0x63, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74, 0x6f, 0x72, 0x2e, 0x53, 0x75, 0x6d,
 	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x17, 0x2e, 0x63, 0x61, 0x6c, 0x63, 0x75, 0x6c,
 	0x61, 0x74, 0x6f, 0x72, 0x2e, 0x53, 0x75, 0x6d, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
@@ -345,12 +345,12 @@ var file_calculatorpb_calculator_proto_rawDesc = []byte{
 	0x2e, 0x63, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74, 0x6f, 0x72, 0x2e, 0x50, 0x4e, 0x44, 0x52,
 	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x17, 0x2e, 0x63, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61,
 	0x74, 0x6f, 0x72, 0x2e, 0x50, 0x4e, 0x44, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22,
-	0x00, 0x30, 0x01, 0x12, 0x3c, 0x0a, 0x07, 0x41, 0x76, 0x65, 0x72, 0x61, 0x67, 0x65, 0x12, 0x16,
+	0x00, 0x30, 0x01, 0x12, 0x3e, 0x0a, 0x07, 0x41, 0x76, 0x65, 0x72, 0x61, 0x67, 0x65, 0x12, 0x16,
 	0x2e, 0x63, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74, 0x6f, 0x72, 0x2e, 0x41, 0x76, 0x67, 0x52,
 	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x17, 0x2e, 0x63, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61,
-	0x74, 0x6f, 0x72, 0x2e, 0x41, 0x76, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x28,
-	0x01, 0x42, 0x10, 0x5a, 0x0e, 0x2e, 0x2f, 0x63, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74, 0x6f,
-	0x72, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x74, 0x6f, 0x72, 0x2e, 0x41, 0x76, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22,
+	0x00, 0x28, 0x01, 0x42, 0x10, 0x5a, 0x0e, 0x2e, 0x2f, 0x63, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61,
+	0x74, 0x6f, 0x72, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -375,12 +375,12 @@ var file_calculatorpb_calculator_proto_goTypes = []interface{}{
 	(*AvgResponse)(nil), // 5: calculator.AvgResponse
 }
 var file_calculatorpb_calculator_proto_depIdxs = []int32{
-	0, // 0: calculator.CalcularotService.Sum:input_type -> calculator.SumRequest
-	2, // 1: calculator.CalcularotService.PrimeNumberDecomposition:input_type -> calculator.PNDRequest
-	4, // 2: calculator.CalcularotService.Average:input_type -> calculator.AvgRequest
-	1, // 3: calculator.CalcularotService.Sum:output_type -> calculator.SumResponse
-	3, // 4: calculator.CalcularotService.PrimeNumberDecomposition:output_type -> calculator.PNDResponse
-	5, // 5: calculator.CalcularotService.Average:output_type -> calculator.AvgResponse
+	0, // 0: calculator.CalculatorService.Sum:input_type -> calculator.SumRequest
+	2, // 1: calculator.CalculatorService.PrimeNumberDecomposition:input_type -> calculator.PNDRequest
+	4, // 2: calculator.CalculatorService.Average:input_type -> calculator.AvgRequest
+	1, // 3: calculator.CalculatorService.Sum:output_type -> calculator.SumResponse
+	3, // 4: calculator.CalculatorService.PrimeNumberDecomposition:output_type -> calculator.PNDResponse
+	5, // 5: calculator.CalculatorService.Average:output_type -> calculator.AvgResponse
 	3, // [3:6] is the sub-list for method output_type
 	0, // [0:3] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -495,38 +495,38 @@ var _ grpc.ClientConnInterface
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion6
 
-// CalcularotServiceClient is the client API for CalcularotService service.
+// CalculatorServiceClient is the client API for CalculatorService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type CalcularotServiceClient interface {
+type CalculatorServiceClient interface {
 	Sum(ctx context.Context, in *SumRequest, opts ...grpc.CallOption) (*SumResponse, error)
-	PrimeNumberDecomposition(ctx context.Context, in *PNDRequest, opts ...grpc.CallOption) (CalcularotService_PrimeNumberDecompositionClient, error)
-	Average(ctx context.Context, opts ...grpc.CallOption) (CalcularotService_AverageClient, error)
+	PrimeNumberDecomposition(ctx context.Context, in *PNDRequest, opts ...grpc.CallOption) (CalculatorService_PrimeNumberDecompositionClient, error)
+	Average(ctx context.Context, opts ...grpc.CallOption) (CalculatorService_AverageClient, error)
 }
 
-type calcularotServiceClient struct {
+type calculatorServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewCalcularotServiceClient(cc grpc.ClientConnInterface) CalcularotServiceClient {
-	return &calcularotServiceClient{cc}
+func NewCalculatorServiceClient(cc grpc.ClientConnInterface) CalculatorServiceClient {
+	return &calculatorServiceClient{cc}
 }
 
-func (c *calcularotServiceClient) Sum(ctx context.Context, in *SumRequest, opts ...grpc.CallOption) (*SumResponse, error) {
+func (c *calculatorServiceClient) Sum(ctx context.Context, in *SumRequest, opts ...grpc.CallOption) (*SumResponse, error) {
 	out := new(SumResponse)
-	err := c.cc.Invoke(ctx, "/calculator.CalcularotService/Sum", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/calculator.CalculatorService/Sum", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *calcularotServiceClient) PrimeNumberDecomposition(ctx context.Context, in *PNDRequest, opts ...grpc.CallOption) (CalcularotService_PrimeNumberDecompositionClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_CalcularotService_serviceDesc.Streams[0], "/calculator.CalcularotService/PrimeNumberDecomposition", opts...)
+func (c *calculatorServiceClient) PrimeNumberDecomposition(ctx context.Context, in *PNDRequest, opts ...grpc.CallOption) (CalculatorService_PrimeNumberDecompositionClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_CalculatorService_serviceDesc.Streams[0], "/calculator.CalculatorService/PrimeNumberDecomposition", opts...)
 	if err != nil {
 		return nil, err
 	}
-	x := &calcularotServicePrimeNumberDecompositionClient{stream}
+	x := &calculatorServicePrimeNumberDecompositionClient{stream}
 	if err := x.ClientStream.SendMsg(in); err != nil {
 		return nil, err
 	}
@@ -536,16 +536,16 @@ func (c *calcularotServiceClient) PrimeNumberDecomposition(ctx context.Context, 
 	return x, nil
 }
 
-type CalcularotService_PrimeNumberDecompositionClient interface {
+type CalculatorService_PrimeNumberDecompositionClient interface {
 	Recv() (*PNDResponse, error)
 	grpc.ClientStream
 }
 
-type calcularotServicePrimeNumberDecompositionClient struct {
+type calculatorServicePrimeNumberDecompositionClient struct {
 	grpc.ClientStream
 }
 
-func (x *calcularotServicePrimeNumberDecompositionClient) Recv() (*PNDResponse, error) {
+func (x *calculatorServicePrimeNumberDecompositionClient) Recv() (*PNDResponse, error) {
 	m := new(PNDResponse)
 	if err := x.ClientStream.RecvMsg(m); err != nil {
 		return nil, err
@@ -553,30 +553,30 @@ func (x *calcularotServicePrimeNumberDecompositionClient) Recv() (*PNDResponse, 
 	return m, nil
 }
 
-func (c *calcularotServiceClient) Average(ctx context.Context, opts ...grpc.CallOption) (CalcularotService_AverageClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_CalcularotService_serviceDesc.Streams[1], "/calculator.CalcularotService/Average", opts...)
+func (c *calculatorServiceClient) Average(ctx context.Context, opts ...grpc.CallOption) (CalculatorService_AverageClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_CalculatorService_serviceDesc.Streams[1], "/calculator.CalculatorService/Average", opts...)
 	if err != nil {
 		return nil, err
 	}
-	x := &calcularotServiceAverageClient{stream}
+	x := &calculatorServiceAverageClient{stream}
 	return x, nil
 }
 
-type CalcularotService_AverageClient interface {
+type CalculatorService_AverageClient interface {
 	Send(*AvgRequest) error
 	CloseAndRecv() (*AvgResponse, error)
 	grpc.ClientStream
 }
 
-type calcularotServiceAverageClient struct {
+type calculatorServiceAverageClient struct {
 	grpc.ClientStream
 }
 
-func (x *calcularotServiceAverageClient) Send(m *AvgRequest) error {
+func (x *calculatorServiceAverageClient) Send(m *AvgRequest) error {
 	return x.ClientStream.SendMsg(m)
 }
 
-func (x *calcularotServiceAverageClient) CloseAndRecv() (*AvgResponse, error) {
+func (x *calculatorServiceAverageClient) CloseAndRecv() (*AvgResponse, error) {
 	if err := x.ClientStream.CloseSend(); err != nil {
 		return nil, err
 	}
@@ -587,89 +587,89 @@ func (x *calcularotServiceAverageClient) CloseAndRecv() (*AvgResponse, error) {
 	return m, nil
 }
 
-// CalcularotServiceServer is the server API for CalcularotService service.
-type CalcularotServiceServer interface {
+// CalculatorServiceServer is the server API for CalculatorService service.
+type CalculatorServiceServer interface {
 	Sum(context.Context, *SumRequest) (*SumResponse, error)
-	PrimeNumberDecomposition(*PNDRequest, CalcularotService_PrimeNumberDecompositionServer) error
-	Average(CalcularotService_AverageServer) error
+	PrimeNumberDecomposition(*PNDRequest, CalculatorService_PrimeNumberDecompositionServer) error
+	Average(CalculatorService_AverageServer) error
 }
 
-// UnimplementedCalcularotServiceServer can be embedded to have forward compatible implementations.
-type UnimplementedCalcularotServiceServer struct {
+// UnimplementedCalculatorServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedCalculatorServiceServer struct {
 }
 
-func (*UnimplementedCalcularotServiceServer) Sum(context.Context, *SumRequest) (*SumResponse, error) {
+func (*UnimplementedCalculatorServiceServer) Sum(context.Context, *SumRequest) (*SumResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Sum not implemented")
 }
-func (*UnimplementedCalcularotServiceServer) PrimeNumberDecomposition(*PNDRequest, CalcularotService_PrimeNumberDecompositionServer) error {
+func (*UnimplementedCalculatorServiceServer) PrimeNumberDecomposition(*PNDRequest, CalculatorService_PrimeNumberDecompositionServer) error {
 	return status.Errorf(codes.Unimplemented, "method PrimeNumberDecomposition not implemented")
 }
-func (*UnimplementedCalcularotServiceServer) Average(CalcularotService_AverageServer) error {
+func (*UnimplementedCalculatorServiceServer) Average(CalculatorService_AverageServer) error {
 	return status.Errorf(codes.Unimplemented, "method Average not implemented")
 }
 
-func RegisterCalcularotServiceServer(s *grpc.Server, srv CalcularotServiceServer) {
-	s.RegisterService(&_CalcularotService_serviceDesc, srv)
+func RegisterCalculatorServiceServer(s *grpc.Server, srv CalculatorServiceServer) {
+	s.RegisterService(&_CalculatorService_serviceDesc, srv)
 }
 
-func _CalcularotService_Sum_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _CalculatorService_Sum_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SumRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(CalcularotServiceServer).Sum(ctx, in)
+		return srv.(CalculatorServiceServer).Sum(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/calculator.CalcularotService/Sum",
+		FullMethod: "/calculator.CalculatorService/Sum",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CalcularotServiceServer).Sum(ctx, req.(*SumRequest))
+		return srv.(CalculatorServiceServer).Sum(ctx, req.(*SumRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _CalcularotService_PrimeNumberDecomposition_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _CalculatorService_PrimeNumberDecomposition_Handler(srv interface{}, stream grpc.ServerStream) error {
 	m := new(PNDRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
 	}
-	return srv.(CalcularotServiceServer).PrimeNumberDecomposition(m, &calcularotServicePrimeNumberDecompositionServer{stream})
+	return srv.(CalculatorServiceServer).PrimeNumberDecomposition(m, &calculatorServicePrimeNumberDecompositionServer{stream})
 }
 
-type CalcularotService_PrimeNumberDecompositionServer interface {
+type CalculatorService_PrimeNumberDecompositionServer interface {
 	Send(*PNDResponse) error
 	grpc.ServerStream
 }
 
-type calcularotServicePrimeNumberDecompositionServer struct {
+type calculatorServicePrimeNumberDecompositionServer struct {
 	grpc.ServerStream
 }
 
-func (x *calcularotServicePrimeNumberDecompositionServer) Send(m *PNDResponse) error {
+func (x *calculatorServicePrimeNumberDecompositionServer) Send(m *PNDResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func _CalcularotService_Average_Handler(srv interface{}, stream grpc.ServerStream) error {
-	return srv.(CalcularotServiceServer).Average(&calcularotServiceAverageServer{stream})
+func _CalculatorService_Average_Handler(srv interface{}, stream grpc.ServerStream) error {
+	return srv.(CalculatorServiceServer).Average(&calculatorServiceAverageServer{stream})
 }
 
-type CalcularotService_AverageServer interface {
+type CalculatorService_AverageServer interface {
 	SendAndClose(*AvgResponse) error
 	Recv() (*AvgRequest, error)
 	grpc.ServerStream
 }
 
-type calcularotServiceAverageServer struct {
+type calculatorServiceAverageServer struct {
 	grpc.ServerStream
 }
 
-func (x *calcularotServiceAverageServer) SendAndClose(m *AvgResponse) error {
+func (x *calculatorServiceAverageServer) SendAndClose(m *AvgResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func (x *calcularotServiceAverageServer) Recv() (*AvgRequest, error) {
+func (x *calculatorServiceAverageServer) Recv() (*AvgRequest, error) {
 	m := new(AvgRequest)
 	if err := x.ServerStream.RecvMsg(m); err != nil {
 		return nil, err
@@ -677,24 +677,24 @@ func (x *calcularotServiceAverageServer) Recv() (*AvgRequest, error) {
 	return m, nil
 }
 
-var _CalcularotService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "calculator.CalcularotService",
-	HandlerType: (*CalcularotServiceServer)(nil),
+var _CalculatorService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "calculator.CalculatorService",
+	HandlerType: (*CalculatorServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "Sum",
-			Handler:    _CalcularotService_Sum_Handler,
+			Handler:    _CalculatorService_Sum_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{
 		{
 			StreamName:    "PrimeNumberDecomposition",
-			Handler:       _CalcularotService_PrimeNumberDecomposition_Handler,
+			Handler:       _CalculatorService_PrimeNumberDecomposition_Handler,
 			ServerStreams: true,
 		},
 		{
 			StreamName:    "Average",
-			Handler:       _CalcularotService_Average_Handler,
+			Handler:       _CalculatorService_Average_Handler,
 			ClientStreams: true,
 		},
 	},
