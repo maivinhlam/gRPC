@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"io"
 	"log"
 
 	"calculator/calculatorpb"
@@ -22,7 +23,8 @@ func main() {
 
 	// log.Printf("Service client %f", client)
 
-	callSum(client)
+	// callSum(client)
+	callPND(client)
 }
 
 func callSum(c calculatorpb.CalcularotServiceClient) {
@@ -37,4 +39,26 @@ func callSum(c calculatorpb.CalcularotServiceClient) {
 	}
 
 	log.Printf("sum api response %v", resp.GetResult())
+}
+
+func callPND(c calculatorpb.CalcularotServiceClient) {
+	log.Println("Call PND api...")
+
+	stream, err := c.PrimeNumberDecomposition(context.Background(), &calculatorpb.PNDRequest{
+		Number: 124,
+	})
+
+	if err != nil {
+		log.Fatalf("Call PND error %v", err)
+	}
+
+	for {
+		resp, recvErr := stream.Recv()
+		if recvErr == io.EOF {
+			log.Fatalf("Server finish streaming")
+			return
+		}
+		log.Printf("PND api response: %v", resp.Result)
+	}
+
 }

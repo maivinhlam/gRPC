@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"net"
+	"time"
 
 	"google.golang.org/grpc"
 )
@@ -37,4 +38,27 @@ func main() {
 	if err != nil {
 		log.Fatalf("Err while serve &v", err)
 	}
+}
+
+func (*server) PrimeNumberDecomposition(req *calculatorpb.PNDRequest, stream calculatorpb.CalcularotService_PrimeNumberDecompositionServer) error {
+	log.Println("PrimeNumberDecomposition called ...")
+
+	k := int32(2)
+	N := req.GetNumber()
+	for N > 1 {
+		if N%k == 0 {
+			N = N / k
+
+			//send to client
+			stream.Send(&calculatorpb.PNDResponse{
+				Result: k,
+			})
+
+			time.Sleep(time.Second)
+		} else {
+			k++
+			log.Printf("k increase to %v", k)
+		}
+	}
+	return nil
 }
