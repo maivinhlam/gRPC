@@ -1,7 +1,7 @@
 package main
 
 import (
-	"calculator/calculatorpb"
+	"calculator/proto"
 	"context"
 	"fmt"
 	"io"
@@ -14,9 +14,9 @@ import (
 
 type server struct{}
 
-func (*server) Sum(ctx context.Context, req *calculatorpb.SumRequest) (*calculatorpb.SumResponse, error) {
+func (*server) Sum(ctx context.Context, req *proto.SumRequest) (*proto.SumResponse, error) {
 	log.Println("Sum called ...")
-	resq := &calculatorpb.SumResponse{
+	resq := &proto.SumResponse{
 		Result: req.GetNum1() + req.GetNum2(),
 	}
 
@@ -31,7 +31,7 @@ func main() {
 
 	s := grpc.NewServer()
 
-	calculatorpb.RegisterCalculatorServiceServer(s, &server{})
+	proto.RegisterCalculatorServiceServer(s, &server{})
 
 	fmt.Println("Calculator is running ....")
 	err = s.Serve(lis)
@@ -41,7 +41,7 @@ func main() {
 	}
 }
 
-func (*server) PrimeNumberDecomposition(req *calculatorpb.PNDRequest, stream calculatorpb.CalculatorService_PrimeNumberDecompositionServer) error {
+func (*server) PrimeNumberDecomposition(req *proto.PNDRequest, stream proto.CalculatorService_PrimeNumberDecompositionServer) error {
 	log.Println("PrimeNumberDecomposition called ...")
 
 	k := int32(2)
@@ -51,7 +51,7 @@ func (*server) PrimeNumberDecomposition(req *calculatorpb.PNDRequest, stream cal
 			N = N / k
 
 			//send to client
-			stream.Send(&calculatorpb.PNDResponse{
+			stream.Send(&proto.PNDResponse{
 				Result: k,
 			})
 
@@ -64,14 +64,14 @@ func (*server) PrimeNumberDecomposition(req *calculatorpb.PNDRequest, stream cal
 	return nil
 }
 
-func (*server) Average(stream calculatorpb.CalculatorService_AverageServer) error {
+func (*server) Average(stream proto.CalculatorService_AverageServer) error {
 	log.Println("Average called..")
 	var total float32
 	var count int
 	for {
 		req, err := stream.Recv()
 		if err == io.EOF {
-			resp := &calculatorpb.AvgResponse{
+			resp := &proto.AvgResponse{
 				Result: total / float32(count),
 			}
 

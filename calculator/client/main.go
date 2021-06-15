@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	"calculator/calculatorpb"
+	"calculator/proto"
 
 	"google.golang.org/grpc"
 )
@@ -20,7 +20,7 @@ func main() {
 
 	defer cc.Close()
 
-	client := calculatorpb.NewCalculatorServiceClient(cc)
+	client := proto.NewCalculatorServiceClient(cc)
 
 	// log.Printf("Service client %f", client)
 
@@ -29,9 +29,9 @@ func main() {
 	callAverage(client)
 }
 
-func callSum(c calculatorpb.CalculatorServiceClient) {
+func callSum(c proto.CalculatorServiceClient) {
 	log.Println("Call sum api...")
-	resp, err := c.Sum(context.Background(), &calculatorpb.SumRequest{
+	resp, err := c.Sum(context.Background(), &proto.SumRequest{
 		Num1: 5,
 		Num2: 7,
 	})
@@ -43,10 +43,10 @@ func callSum(c calculatorpb.CalculatorServiceClient) {
 	log.Printf("sum api response %v", resp.GetResult())
 }
 
-func callPND(c calculatorpb.CalculatorServiceClient) {
+func callPND(c proto.CalculatorServiceClient) {
 	log.Println("Call PND api..")
 
-	stream, err := c.PrimeNumberDecomposition(context.Background(), &calculatorpb.PNDRequest{
+	stream, err := c.PrimeNumberDecomposition(context.Background(), &proto.PNDRequest{
 		Number: 124,
 	})
 
@@ -65,30 +65,30 @@ func callPND(c calculatorpb.CalculatorServiceClient) {
 
 }
 
-func callAverage(c calculatorpb.CalculatorServiceClient) {
+func callAverage(c proto.CalculatorServiceClient) {
 	log.Println("Call Average api..")
 	stream, err := c.Average(context.Background())
 	if err != nil {
 		log.Fatalf("Call average err %v", err)
 	}
 
-	listReq := []calculatorpb.AvgRequest{
-		calculatorpb.AvgRequest{
+	listReq := []proto.AvgRequest{
+		proto.AvgRequest{
 			Number: 4,
 		},
-		calculatorpb.AvgRequest{
+		proto.AvgRequest{
 			Number: 6,
 		},
-		calculatorpb.AvgRequest{
+		proto.AvgRequest{
 			Number: 8,
 		},
-		calculatorpb.AvgRequest{
+		proto.AvgRequest{
 			Number: 12,
 		},
-		calculatorpb.AvgRequest{
+		proto.AvgRequest{
 			Number: 10,
 		},
-		calculatorpb.AvgRequest{
+		proto.AvgRequest{
 			Number: 14,
 		},
 	}
