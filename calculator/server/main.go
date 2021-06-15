@@ -87,3 +87,38 @@ func (*server) Average(stream proto.CalculatorService_AverageServer) error {
 		count++
 	}
 }
+
+func (*server) Max(stream proto.CalculatorService_MaxServer) error {
+	log.Println("Max called..")
+	max := int32(0)
+
+	for {
+		req, err := stream.Recv()
+
+		if err == io.EOF {
+			log.Printf("EOF..")
+			return nil
+		}
+
+		if err != nil {
+			log.Fatalf("Err while Recv Max %v", err)
+			return err
+		}
+
+		num := req.GetNumber()
+		log.Printf("recv number %v\n", num)
+
+		if num > max {
+			max = num
+		}
+
+		err = stream.Send(&proto.MaxResponse{
+			Result: max,
+		})
+		if err != nil {
+			log.Fatalf("Send max err %v", err)
+			return err
+		}
+	}
+
+}

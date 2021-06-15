@@ -4,6 +4,7 @@ import (
 	"context"
 	"io"
 	"log"
+	"sync"
 	"time"
 
 	"calculator/proto"
@@ -26,7 +27,8 @@ func main() {
 
 	// callSum(client)
 	// callPND(client)
-	callAverage(client)
+	// callAverage(client)
+	callMax(client)
 }
 
 func callSum(c proto.CalculatorServiceClient) {
@@ -106,6 +108,69 @@ func callAverage(c proto.CalculatorServiceClient) {
 		log.Fatalf("receive average response err %v", err)
 	}
 
-	log.Fatalf("average response %+v", resp)
+	log.Printf("average response %+v", resp)
 
+}
+
+func callMax(c proto.CalculatorServiceClient) {
+	log.Printf("Call Max api..")
+	stream, err := c.Max(context.Background())
+	if err != nil {
+		log.Fatalf("Call Max err %v", err)
+	}
+	var waitgroup sync.WaitGroup
+	waitgroup.Add(1)
+
+	go func() {
+		listReq := []proto.MaxRequest{
+			proto.MaxRequest{
+				Number: 4,
+			},
+			proto.MaxRequest{
+				Number: 6,
+			},
+			proto.MaxRequest{
+				Number: 8,
+			},
+			proto.MaxRequest{
+				Number: 12,
+			},
+			proto.MaxRequest{
+				Number: 10,
+			},
+			proto.MaxRequest{
+				Number: 14,
+			},
+		}
+
+		for _, req := range listReq {
+			err := stream.Send(&req)
+			if err != nil {
+				log.Fatalf("send max request err %v", err)
+				break
+			}
+			time.Sleep(time.Millisecond * 500)
+		}
+
+		stream.CloseSend()
+	}()
+
+	go func() {
+		for {
+			resp, err := stream.Recv()
+			if err == io.EOF {
+				log.Printf("End max api")
+				break
+			}
+			if err != nil {
+				log.Fatalf("rev max err %v", err)
+				break
+			}
+
+			log.Printf("max: %v", resp.GetResult())
+		}
+		waitgroup.Done()
+	}()
+
+	waitgroup.Wait()
 }
